@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6dy3pd38ui67"]
+
+[ext_resource type="Texture2D" uid="uid://d0kw5cv54p3js" path="res://assets/ui/healthbarUnder.png" id="1_owksf"]
+[ext_resource type="FontFile" uid="uid://cvk75ijdgm4qh" path="res://assets/environment/Haedus_Font_1_21/Haedus.ttf" id="2_5ltbk"]
+
+[node name="score_display_UI" type="NinePatchRect"]
+offset_right = 105.0
+offset_bottom = 40.0
+texture = ExtResource("1_owksf")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = -4.0
+offset_right = 74.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("2_5ltbk")
+theme_override_font_sizes/font_size = 40
+text = "10"

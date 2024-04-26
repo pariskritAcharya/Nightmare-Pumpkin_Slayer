@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8jckh0hs1hqs"
+path="res://.godot/imported/nightmare-on-imaginationland-8040 (1).mp3-61e506497db696aa5d7705f0ea6f8508.mp3str"
+
+[deps]
+
+source_file="res://audio track/nightmare-on-imaginationland-8040 (1).mp3"
+dest_files=["res://.godot/imported/nightmare-on-imaginationland-8040 (1).mp3-61e506497db696aa5d7705f0ea6f8508.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cljklpdlq4llr"
+path="res://.godot/imported/y2mate.com - Small Bomb Explosion Sound Effect.mp3-69fd846c3175b57d55b343a8d30e2320.mp3str"
+
+[deps]
+
+source_file="res://audio track/y2mate.com - Small Bomb Explosion Sound Effect.mp3"
+dest_files=["res://.godot/imported/y2mate.com - Small Bomb Explosion Sound Effect.mp3-69fd846c3175b57d55b343a8d30e2320.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

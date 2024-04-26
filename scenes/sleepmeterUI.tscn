@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://buu8q6a7ibney"]
+
+[ext_resource type="Texture2D" uid="uid://d0kw5cv54p3js" path="res://assets/ui/healthbarUnder.png" id="1_hftsr"]
+[ext_resource type="Texture2D" uid="uid://bxcm7gbtoalsa" path="res://assets/ui/healthbarProgress (1).png" id="2_ti756"]
+[ext_resource type="Script" path="res://scenes/sleep_meter.gd" id="3_faqvd"]
+[ext_resource type="Texture2D" uid="uid://c4iie1wv5q2kk" path="res://assets/ui/sleep.png" id="4_6uryw"]
+
+[node name="sleepmeter" type="TextureProgressBar"]
+offset_left = 1636.0
+offset_top = 125.0
+offset_right = 1878.0
+offset_bottom = 165.0
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 4
+texture_under = ExtResource("1_hftsr")
+texture_progress = ExtResource("2_ti756")
+script = ExtResource("3_faqvd")
+
+[node name="Sleep" type="Sprite2D" parent="."]
+position = Vector2(17, 17)
+scale = Vector2(0.175781, 0.175781)
+texture = ExtResource("4_6uryw")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkp6bq5py16k1"]
+
+[ext_resource type="Texture2D" uid="uid://bgejrd40i2a2l" path="res://assets/prototype/floor.png" id="1_a8mgc"]
+[ext_resource type="Texture2D" uid="uid://8junjgky071x" path="res://assets/environment/Halloween-2D-Game-Backgrounds-PNG/PNG/2_game_background/layers/6.png" id="2_710u5"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_invkq"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6psg5"]
+texture = ExtResource("1_a8mgc")
+0:0/0 = 0
+0:0/0/modulate = Color(0.0862745, 0.101961, 0.113725, 1)
+0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_invkq")
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v1dl0"]
+texture = ExtResource("2_710u5")
+texture_region_size = Vector2i(1920, 108)
+0:9/0 = 0
+0:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:9/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_g5cjl"]
+occlusion_layer_0/light_mask = 1
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_6psg5")
+sources/1 = SubResource("TileSetAtlasSource_v1dl0")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_g5cjl")
+format = 2

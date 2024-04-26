@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0dm3pp4usq3k"
+path="res://.godot/imported/ScaryMusic2018-12-17_-_Halloween_-_David_Fesliyan.mp3-5dc312b6b2108e3aa20c035cd90e3a60.mp3str"
+
+[deps]
+
+source_file="res://audio track/ScaryMusic2018-12-17_-_Halloween_-_David_Fesliyan.mp3"
+dest_files=["res://.godot/imported/ScaryMusic2018-12-17_-_Halloween_-_David_Fesliyan.mp3-5dc312b6b2108e3aa20c035cd90e3a60.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

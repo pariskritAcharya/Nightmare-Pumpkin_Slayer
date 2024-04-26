@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://xlba4ywpbkpq"]
+
+[ext_resource type="Texture2D" uid="uid://pbae5ritmdv8" path="res://assets/environment/Halloween-2D-Game-Backgrounds-PNG/PNG/2_game_background/2_game_background.png" id="1_relqd"]
+[ext_resource type="Script" path="res://game_over.gd" id="1_rsos1"]
+[ext_resource type="FontFile" uid="uid://cvk75ijdgm4qh" path="res://assets/environment/Haedus_Font_1_21/Haedus.ttf" id="2_y3w5o"]
+[ext_resource type="PackedScene" uid="uid://b8bvm6g0egmyp" path="res://scenes/highscore_display_ui.tscn" id="3_vpycw"]
+[ext_resource type="PackedScene" uid="uid://cybtg1j4f5633" path="res://scenes/current_score_ui.tscn" id="4_7nvr3"]
+[ext_resource type="Theme" uid="uid://j7ep7x3vguh0" path="res://new_theme.tres" id="6_l6rb2"]
+[ext_resource type="AudioStream" uid="uid://cgwuvy23jbwc2" path="res://audio track/mysterious-forest-creepy-lofi-halloween-lofi-halloween-music-168238.mp3" id="7_j5dt6"]
+
+[node name="gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rsos1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_relqd")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 803.0
+offset_top = 347.0
+offset_right = 1118.0
+offset_bottom = 465.0
+theme_override_fonts/font = ExtResource("2_y3w5o")
+theme_override_font_sizes/font_size = 100
+text = "Game over"
+
+[node name="highscore_display_UI" parent="." instance=ExtResource("3_vpycw")]
+layout_mode = 0
+offset_left = 861.5
+offset_top = 490.0
+offset_right = 1083.5
+offset_bottom = 536.0
+
+[node name="current_score_UI" parent="." instance=ExtResource("4_7nvr3")]
+layout_mode = 0
+offset_left = 861.5
+offset_top = 577.0
+offset_right = 1083.5
+offset_bottom = 621.0
+
+[node name="restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 862.0
+offset_top = 660.0
+offset_right = 1084.0
+offset_bottom = 724.0
+theme = ExtResource("6_l6rb2")
+theme_override_font_sizes/font_size = 50
+text = "restart"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 862.0
+offset_top = 761.0
+offset_right = 1084.0
+offset_bottom = 825.0
+theme = ExtResource("6_l6rb2")
+theme_override_font_sizes/font_size = 50
+text = "back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_j5dt6")
+autoplay = true
+
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

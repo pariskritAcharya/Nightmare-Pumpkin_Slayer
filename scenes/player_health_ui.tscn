@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctnfn8kfqwxgn"]
+
+[ext_resource type="Texture2D" uid="uid://d0kw5cv54p3js" path="res://assets/ui/healthbarUnder.png" id="1_dqkad"]
+[ext_resource type="Texture2D" uid="uid://l4kgr160ie1c" path="res://assets/ui/healthbarProgress.png" id="2_vutp4"]
+[ext_resource type="Script" path="res://scenes/player_health.gd" id="3_y4tq5"]
+[ext_resource type="Texture2D" uid="uid://bx0sbu2k2vlit" path="res://assets/ui/heart.png" id="4_roqqn"]
+
+[node name="health" type="TextureProgressBar"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -284.0
+offset_top = 56.0
+offset_right = -42.0
+offset_bottom = 99.0
+grow_horizontal = 0
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 4
+texture_under = ExtResource("1_dqkad")
+texture_progress = ExtResource("2_vutp4")
+script = ExtResource("3_y4tq5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 22)
+scale = Vector2(0.0921428, 0.0887835)
+texture = ExtResource("4_roqqn")

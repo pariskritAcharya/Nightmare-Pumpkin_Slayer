@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci8j3hgapn5s5"]
+
+[ext_resource type="Texture2D" uid="uid://byxn38fpf1pwm" path="res://assets/prototype/New Piskel-1.png (1).png" id="1_3wwuk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg8a2"]
+size = Vector2(84, 52)
+
+[sub_resource type="Gradient" id="Gradient_nkgcq"]
+offsets = PackedFloat32Array(0, 0.767045)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ff3bt"]
+gradient = SubResource("Gradient_nkgcq")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[node name="bed" type="Area2D"]
+z_index = -1
+collision_layer = 8
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-10, -7)
+scale = Vector2(5.125, 5.125)
+texture = ExtResource("1_3wwuk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -8)
+shape = SubResource("RectangleShape2D_yg8a2")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-8, -11)
+scale = Vector2(2.60938, 2.60938)
+color = Color(0.666667, 0.00392157, 0.909804, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_ff3bt")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(-40, -11)
+scale = Vector2(2.60938, 2.60938)
+color = Color(0.360784, 0.396078, 0.341176, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_ff3bt")
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(34, -13)
+scale = Vector2(2.60938, 2.60938)
+color = Color(0.360784, 0.396078, 0.341176, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_ff3bt")

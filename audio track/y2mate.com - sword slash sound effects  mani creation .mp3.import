@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0yo3nf8sovh4"
+path="res://.godot/imported/y2mate.com - sword slash sound effects  mani creation .mp3-ab1dcf613d864d4dbfac48640fd5d101.mp3str"
+
+[deps]
+
+source_file="res://audio track/y2mate.com - sword slash sound effects  mani creation .mp3"
+dest_files=["res://.godot/imported/y2mate.com - sword slash sound effects  mani creation .mp3-ab1dcf613d864d4dbfac48640fd5d101.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

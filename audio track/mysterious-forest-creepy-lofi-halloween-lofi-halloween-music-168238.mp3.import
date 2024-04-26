@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgwuvy23jbwc2"
+path="res://.godot/imported/mysterious-forest-creepy-lofi-halloween-lofi-halloween-music-168238.mp3-aa7079aedd044473e2eb5072b9e10eb5.mp3str"
+
+[deps]
+
+source_file="res://audio track/mysterious-forest-creepy-lofi-halloween-lofi-halloween-music-168238.mp3"
+dest_files=["res://.godot/imported/mysterious-forest-creepy-lofi-halloween-lofi-halloween-music-168238.mp3-aa7079aedd044473e2eb5072b9e10eb5.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,213 @@
+[gd_scene load_steps=11 format=3 uid="uid://bbof50q0rn2aq"]
+
+[ext_resource type="Texture2D" uid="uid://pbae5ritmdv8" path="res://assets/environment/Halloween-2D-Game-Backgrounds-PNG/PNG/2_game_background/2_game_background.png" id="1_vsyn4"]
+[ext_resource type="Script" path="res://menu.gd" id="1_ywktg"]
+[ext_resource type="FontFile" uid="uid://cvk75ijdgm4qh" path="res://assets/environment/Haedus_Font_1_21/Haedus.ttf" id="2_0srn2"]
+[ext_resource type="Theme" uid="uid://j7ep7x3vguh0" path="res://new_theme.tres" id="3_3rxjx"]
+[ext_resource type="Texture2D" uid="uid://c6qfluojt8uk2" path="res://assets/prototype/tiles.png" id="5_tryjn"]
+[ext_resource type="AudioStream" uid="uid://b8jckh0hs1hqs" path="res://audio track/nightmare-on-imaginationland-8040 (1).mp3" id="6_eg2ll"]
+
+[sub_resource type="Animation" id="Animation_glast"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1386, 615)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tiles:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6hkrm"]
+resource_name = "intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 4.28709),
+"update": 0,
+"values": [Vector2(2026, 534), Vector2(1246, 534), Vector2(1386, 534)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tiles:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0hufj"]
+resource_name = "outro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1386, 534), Vector2(-528, 534)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tiles:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o5i41"]
+_data = {
+"RESET": SubResource("Animation_glast"),
+"intro": SubResource("Animation_6hkrm"),
+"outro": SubResource("Animation_0hufj")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ywktg")
+
+[node name="2GameBackground" type="Sprite2D" parent="."]
+texture = ExtResource("1_vsyn4")
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1386.0
+offset_top = 615.0
+offset_right = 1985.0
+offset_bottom = 12020.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_0srn2")
+theme_override_font_sizes/font_size = 100
+text = "  pumpkin slayer  "
+
+[node name="start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_3rxjx")
+theme_override_font_sizes/font_size = 70
+text = "start game"
+
+[node name="options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_3rxjx")
+theme_override_font_sizes/font_size = 70
+text = "actions"
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_3rxjx")
+theme_override_font_sizes/font_size = 70
+text = "quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_o5i41")
+}
+
+[node name="Tiles" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1151.5, 475)
+scale = Vector2(161.187, 94)
+texture = ExtResource("5_tryjn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_eg2ll")
+autoplay = true
+
+[node name="keys" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="keys"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.611765)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="keys"]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 322.0
+offset_right = 1232.0
+offset_bottom = 670.0
+
+[node name="Label" type="Label" parent="keys/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0srn2")
+theme_override_font_sizes/font_size = 100
+text = "     Actions"
+
+[node name="Label2" type="Label" parent="keys/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.482353, 0.482353, 0.482353, 1)
+theme_override_fonts/font = ExtResource("2_0srn2")
+theme_override_font_sizes/font_size = 70
+text = "move: WASD / arrow
+use bed: E
+attack: space/ lmb
+pause game: esc"
+
+[node name="Button" type="Button" parent="keys/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_3rxjx")
+text = "back"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="keys/VBoxContainer/Button" to="." method="_on_button_pressed"]
